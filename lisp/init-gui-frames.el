@@ -7,6 +7,26 @@
 (setq inhibit-startup-echo-area-message t)
 
 ;;----------------------------------------------------------------------------
+;; self defined
+;;----------------------------------------------------------------------------
+
+;; set title
+(setq frame-title-format "E = MC^2")
+
+;; change font size as 16pt
+;; http://stackoverflow.com/questions/294664/how-to-set-the-font-size-in-emacs
+(set-face-attribute 'default nil :height 160)
+
+;; enable del selected zone
+(delete-selection-mode 1)
+
+;; highlight current line
+(global-hl-line-mode 1)
+
+;; highlight match parenthesis
+(add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
+
+;;----------------------------------------------------------------------------
 ;; Show a marker in the left fringe for lines not in the buffer
 ;;----------------------------------------------------------------------------
 (setq indicate-empty-lines t)
